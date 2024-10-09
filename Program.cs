@@ -10,13 +10,14 @@ int x=0;
 //{
 //    Console.WriteLine(e.Message);
 //}
-for (int i = 0; i < 1025; i++)
-{
+//for (int i = 0; i < 1025; i++)
+//{
 
-    Console.WriteLine(MegaPrint(x));
-    x++;
-}
-
+//    Console.WriteLine(MegaPrint(x));
+//    x++;
+//}
+int[] arr = [12, 18, 42];
+DumpMath(arr);
 
 //Разработайте функцию, которая принимает целое число в качестве аргумента и возвращает строку, содержащую это число и слово "компьютер" 
 //    в нужном склонении по падежам в зависимости от числа. Например, при вводе числа 25 функция должна возвращать "25 компьютеров", для 
@@ -77,4 +78,36 @@ string MegaPrint(int a)
     {
         return "WRONG";
     }
+}
+
+
+
+void DumpMath(int[]arr)
+{
+    double x = 1;
+    double a;
+    for(int j=0; j<arr.Length; j++)
+    {
+     for(int i=0; i < arr[j]; i++)
+        {
+            a = arr[j] / x;
+            if (IsCeloe(a) == true)
+            {
+                Console.WriteLine( x);
+            };
+            x++;
+        }
+    }
+
+
+   
+}
+
+bool IsCeloe(double n)
+{
+    if (n % 1 == 0)
+    {
+        return true;
+    }
+    else { return false; }
 }
